@@ -47,6 +47,26 @@ main section, main section img {
     border-radius: 10px;
 }
 
+aside {
+    flex-direction: column;
+}
+div#tag {
+    display: flex;
+    width: 365px;
+    height: 25px;
+    justify-content: space-between;
+}
+
+div#tag span {
+    width: 115px;
+    height: 25px;
+    background-color: #FF6060;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
 div#dropdown {
     display: flex;
     flex-direction: row;
@@ -68,7 +88,6 @@ footer {
     height: 114px;
     width: 513px;
     flex-direction: column;
-
 }
 
 footer span {
