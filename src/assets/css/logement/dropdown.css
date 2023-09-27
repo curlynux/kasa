@@ -1,0 +1,11 @@
+div#dropdown {
+    display: flex;
+    flex-direction: row;
+    width: 1240px;
+    height: 52px;
+    justify-content: space-between;
+}
+
+div#dropdown select {
+    width: 582px;
+}

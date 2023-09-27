@@ -1,0 +1,28 @@
+main {
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-around;
+}
+
+main h1 {
+    font-weight: 700;
+    font-size: 288px;
+    line-height: 410.69px;
+    color: #FF6060;
+    margin: 0px;
+}
+
+main p {
+    color: #FF6060;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 51.34px;
+}
+
+main a {
+    color: #FF6060;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.67px;
+}

@@ -1,0 +1,16 @@
+div#dropdown {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1023px;
+    height: 298px;
+    gap: 30px;
+}
+
+div#dropdown select {
+    width: 1023px;
+    height: 52px;
+    display: flex;
+    background-color: #FF6060;
+    color: white;
+
+}

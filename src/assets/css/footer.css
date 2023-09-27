@@ -1,0 +1,21 @@
+footer {
+    background-color: black;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 1440px;
+    padding: 66px 464px 29px 463px;
+    height: 114px;
+    width: 513px;
+    flex-direction: column;
+
+}
+
+footer span {
+    color: white;
+    display: flex;
+}
+
+footer img {
+    width: 122px;
+    height: 39.4px;
+}

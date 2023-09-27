@@ -1,0 +1,24 @@
+main {
+    background-color: #F6F6F6;
+    width: 1240px;
+    flex-direction: column;
+    align-items: center;
+    height: 829px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+main article {
+    flex-direction: column;
+}
+
+main section {
+    justify-content: space-between;
+    gap: 50px;
+}
+
+main article img {
+    height: 340px;
+    width: 340px;
+    border: 2px solid black;
+}

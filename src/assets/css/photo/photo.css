@@ -1,0 +1,9 @@
+img#imageFond {
+    height: 223px;
+    width: 1240px;
+}
+
+div.imageHeader {
+    margin: 0 auto;
+    display: flex;
+}
