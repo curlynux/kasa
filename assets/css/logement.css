@@ -1,0 +1,82 @@
+html, body, main, section, header, select, aside, article, footer {
+    display: flex;
+}
+
+html, body {
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+header {
+    justify-content: space-between;
+    width: 1240px;
+    margin: 0 auto;
+}
+
+header img#logo {
+    width: 210px;
+    height: 68px;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul, header nav ul li {
+    display: flex;
+}
+
+header nav ul {
+    justify-content: space-around;
+}
+
+header nav ul {
+    align-self: center;
+    width: 309px;
+}
+
+main {
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+main section, main section img {
+    height: 415px;
+    width: 1240px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+div#dropdown {
+    display: flex;
+    flex-direction: row;
+    width: 1240px;
+    height: 52px;
+    justify-content: space-between;
+}
+
+div#dropdown select {
+    width: 582px;
+}
+
+footer {
+    background-color: black;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 1440px;
+    padding: 66px 464px 29px 463px;
+    height: 114px;
+    width: 513px;
+    flex-direction: column;
+
+}
+
+footer span {
+    color: white;
+    display: flex;
+}
+
+footer img {
+    width: 122px;
+    height: 39.4px;
+}
