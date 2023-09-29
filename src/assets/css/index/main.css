@@ -22,3 +22,7 @@ main article img {
     width: 340px;
     border: 2px solid black;
 }
+
+article span {
+    color: black;
+}

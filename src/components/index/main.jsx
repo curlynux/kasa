@@ -2,23 +2,36 @@ import "../../assets/css/index/main.css";
 import { useEffect, useState } from "react";
 
 function Main() {
+	const [data, setData] = useState();
+
+	useEffect(() => {
+		fetch("src/data/logements.json").then((response) => {
+			response.json().then((data) => {
+				setData(data);
+				console.log(data);
+			});
+		});
+	}, []);
 	return (
 		<main>
-			<section>
-				<article>
-					<img src="#" alt="location" />
-					<span>titre de location</span>
-				</article>
-			</section>
-			<section>
-				<article>
-					<img
-						src="https://logos-marques.com/wp-content/uploads/2021/03/Superman-Logo.png"
-						alt="location"
-					/>
-					<span>titre de location</span>
-				</article>
-			</section>
+			{data.map((element, index) => {
+				return (
+					<>
+						<section>
+							<article id={element.id}>
+								<img src={element.cover} alt="location" />
+								<span>{element.title}</span>
+							</article>
+						</section>
+						<section>
+							<article id={element.id}>
+								<img src={element.cover} alt="location" />
+								<span>{element.title}</span>
+							</article>
+						</section>
+					</>
+				);
+			})}
 		</main>
 	);
 }
