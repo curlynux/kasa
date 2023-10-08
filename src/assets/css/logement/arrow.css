@@ -1,0 +1,20 @@
+ svg.fa-chevron-left {
+    left: 30px;
+}
+
+ svg.fa-chevron-right {
+    right: 30px;
+}
+
+main section img.anime {
+    animation: slide 3s ease-out;
+}
+
+@keyframes slide {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}

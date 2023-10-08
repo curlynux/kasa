@@ -1,3 +1,9 @@
 aside {
     flex-direction: column;
 }
+
+aside span#location, aside h2 {
+    color: #FF6060;
+
+}
+

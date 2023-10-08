@@ -8,4 +8,6 @@ div#dropdown {
 
 div#dropdown select {
     width: 582px;
+    background-color: #FF6060;
+
 }

@@ -1,4 +1,5 @@
-import "../../assets/css/index/main.css";
+import "../../assets/css/index/main.module.css";
+import { Link } from "react-router-dom";
 
 function Main({ data }) {
 	console.log(data);
@@ -22,9 +23,11 @@ function Main({ data }) {
 				{firstSectionData &&
 					firstSectionData.map((element, index) => {
 						return (
-							<article>
-								<img src={element.cover} alt="location" />
-								<span>{element.title}</span>
+							<article key={index}>
+								<Link to={`/logement/${element.id}`}>
+									<img src={element.cover} alt="location" />
+									<span>{element.title}</span>
+								</Link>
 							</article>
 						);
 					})}
@@ -33,9 +36,11 @@ function Main({ data }) {
 				{secondSectionData &&
 					secondSectionData.map((element, index) => {
 						return (
-							<article>
-								<img src={element.cover} alt="location" />
-								<span>{element.title}</span>
+							<article key={index}>
+								<Link to={`/logement/${element.id}`}>
+									<img src={element.cover} alt="location" />
+									<span>{element.title}</span>
+								</Link>
 							</article>
 						);
 					})}
