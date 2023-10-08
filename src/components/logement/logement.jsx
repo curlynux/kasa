@@ -46,10 +46,7 @@ function Logement() {
 									</aside>
 									<div id="dropdown">
 										<select name="description" id="description">
-											<option value="test">test</option>
-											<option value="test">test</option>
-											<option value="test">test</option>
-											<option value="test">test</option>
+											<option value="equipements">{element.description}</option>
 										</select>
 										<select name="equipement" id="equipement">
 											{Array.from(element.equipments).map((equip) => {

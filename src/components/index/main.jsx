@@ -2,6 +2,9 @@ import "../../assets/css/index/main.module.css";
 import { Link } from "react-router-dom";
 
 function Main({ data }) {
+	if (!Array.isArray(data)) {
+		return <strong>LOADING...</strong>;
+	}
 	console.log(data);
 	const shuffledData = [...data];
 	for (let i = shuffledData.length - 1; i > 0; i--) {

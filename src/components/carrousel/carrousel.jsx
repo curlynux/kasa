@@ -9,16 +9,19 @@ import "../../assets/css/logement/arrow.css";
 
 function Carrousel({ data }) {
 	console.log("CARROUSEL", data);
+	const [isPlaying, setIsPlaying] = useState(false);
 	const [current, setCurrent] = useState(0);
 	const params = useParams();
 	const id = params.id;
 	function previousPhoto() {
+		setIsPlaying(true);
 		setCurrent((prevCurrent) =>
 			prevCurrent === 0 ? data.length - 1 : prevCurrent - 1
 		);
 	}
 
 	function nextPhoto() {
+		setIsPlaying(true);
 		setCurrent((prevCurrent) =>
 			prevCurrent === data.length - 1 ? 0 : prevCurrent + 1
 		);
@@ -33,7 +36,7 @@ function Carrousel({ data }) {
 								<img
 									src={element.pictures[current]}
 									alt={`cover:${element.id}`}
-									className="anime"
+									className={isPlaying ? "anime" : ""}
 								/>
 								<div
 									style={{
