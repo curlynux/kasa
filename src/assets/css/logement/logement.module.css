@@ -20,8 +20,6 @@ main section div {
 main section div img {
     width: max-content;
     height: max-content;
-    position: relative;
-    bottom: 50%;
 }
 
 main {

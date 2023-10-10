@@ -32,7 +32,7 @@ function Carrousel({ data }) {
 				data.map((element, index) => {
 					if (id === element.id) {
 						return (
-							<div className="carrousel">
+							<div className="carrousel" key={index}>
 								<img
 									src={element.pictures[current]}
 									alt={`cover:${element.id}`}

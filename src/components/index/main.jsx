@@ -1,6 +1,7 @@
-import "../../assets/css/index/main.module.css";
 import { Link } from "react-router-dom";
+import "../../assets/css/responsive/home.css";
 
+import "../../assets/css/index/main.module.css";
 function Main({ data }) {
 	if (!Array.isArray(data)) {
 		return <strong>LOADING...</strong>;

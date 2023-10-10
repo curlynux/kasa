@@ -7,6 +7,7 @@ import Footer from "../footer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Carrousel from "../carrousel/carrousel";
+import Dropdown from "./dropdown";
 
 function Logement() {
 	const [data, setData] = useState();
@@ -48,11 +49,7 @@ function Logement() {
 										<select name="description" id="description">
 											<option value="equipements">{element.description}</option>
 										</select>
-										<select name="equipement" id="equipement">
-											{Array.from(element.equipments).map((equip) => {
-												return <option value={equip}>{equip}</option>;
-											})}
-										</select>
+										<Dropdown data={data} id={id} />
 									</div>
 								</>
 							);

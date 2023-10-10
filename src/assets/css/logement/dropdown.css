@@ -1,13 +1,19 @@
-div#dropdown {
+div#dropdown, div.dropdown {
     display: flex;
     flex-direction: row;
     width: 1240px;
     height: 52px;
     justify-content: space-between;
+    background-color: #FF6060
 }
 
 div#dropdown select {
     width: 582px;
     background-color: #FF6060;
 
+}
+
+div.dropdown button {
+    width: 582px;
+    height: 52px;
 }
