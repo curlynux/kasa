@@ -1,15 +1,18 @@
 main {
     background-color: #F6F6F6;
     width: 1240px;
+    height: 829px;
     flex-direction: column;
     align-items: center;
-    height: 829px;
     justify-content: space-evenly;
     margin: 0 auto;
+    overflow: scroll;
 }
 
 main article {
     flex-direction: column;
+    width: 340px;
+    height: 340px;
 }
 
 main section {
@@ -17,6 +20,7 @@ main section {
     gap: 50px;
     width: 1240px;
     height: 829px;
+    flex-wrap: wrap;
 }
 
 main article img {

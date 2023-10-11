@@ -25,7 +25,7 @@ function Main({ data }) {
 		<main>
 			<section>
 				{firstSectionData &&
-					firstSectionData.map((element, index) => {
+					firstSectionData.slice(0, 3).map((element, index) => {
 						return (
 							<article key={index}>
 								<Link to={`/logement/${element.id}`}>
@@ -38,7 +38,7 @@ function Main({ data }) {
 			</section>
 			<section>
 				{secondSectionData &&
-					secondSectionData.map((element, index) => {
+					secondSectionData.slice(0, 3).map((element, index) => {
 						return (
 							<article key={index}>
 								<Link to={`/logement/${element.id}`}>
