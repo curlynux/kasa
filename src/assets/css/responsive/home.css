@@ -6,16 +6,43 @@
    }
 
    header img {
-    width: 100px;
-    height: 100px;
+      height: 100px;
+      width: 100px;
    }
 
-   main {
-    width: 335px;
-    height: 805px;
+   
+   main > section {
+      width: 350px;
+      height: 2000px;
+      flex-wrap: wrap;
+      flex-direction: column;
+   }
+   html body div#root > main {
+       width: 350px;
+       height: 350px;
    }
 
-   footer {
-    width: 100px;
+   html body div#root > main {
+      overflow: unset;
+      flex-direction: column;
+   }
+
+   article {
+       width: 380px;
+       height: 500px;
+   }
+   main section article {
+      width: 200px;
+      flex-wrap: wrap;
+   }
+
+   main section article img {
+      width: 150px;
+      height: 150px;
+   }
+
+   html body > footer {
+      width: 100px;
+      height: 100px;
    }
 }
