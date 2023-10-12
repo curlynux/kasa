@@ -1,34 +1,21 @@
 /* ----- SMARTPHONE BREAKPOINT MEDIA QUERY ----- */
 
 @media only screen and (max-width: 767px) {
-    body {
-        margin: 0 auto;
-        flex-direction: column;
-        width: 400px;
-    }
-    header {
-        display: flex;
-        flex-direction: column;
-        width: 400px;
-        margin: 0 auto;
-    }
+   body, header, main, section {
+    flex-direction: column;
+   }
 
-    header img {
-        width: 100px;
-        height: 100px;
-    }
+   header img {
+    width: 100px;
+    height: 100px;
+   }
 
-    main {
-        flex-direction: column;
-        width: 400px;
-    }
+   main {
+    width: 335px;
+    height: 805px;
+   }
 
-    main section {
-        flex-direction: column;
-        width: 400px;
-    }
-
-    footer {
-        width: 400px;
-    }
+   footer {
+    width: 100px;
+   }
 }

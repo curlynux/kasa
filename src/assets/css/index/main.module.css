@@ -1,7 +1,6 @@
 main {
     background-color: #F6F6F6;
     width: 1240px;
-    height: 829px;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -19,7 +18,7 @@ main section {
     justify-content: space-between;
     gap: 50px;
     width: 1240px;
-    height: 829px;
+    height: 450px;
     flex-wrap: wrap;
 }
 

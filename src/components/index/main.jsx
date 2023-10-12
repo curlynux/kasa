@@ -25,20 +25,7 @@ function Main({ data }) {
 		<main>
 			<section>
 				{firstSectionData &&
-					firstSectionData.slice(0, 3).map((element, index) => {
-						return (
-							<article key={index}>
-								<Link to={`/logement/${element.id}`}>
-									<img src={element.cover} alt="location" />
-									<span>{element.title}</span>
-								</Link>
-							</article>
-						);
-					})}
-			</section>
-			<section>
-				{secondSectionData &&
-					secondSectionData.slice(0, 3).map((element, index) => {
+					firstSectionData.map((element, index) => {
 						return (
 							<article key={index}>
 								<Link to={`/logement/${element.id}`}>
