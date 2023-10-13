@@ -1,0 +1,22 @@
+html body div#root main section div.carrousel,
+html body div#root main section div.carrousel div#arrow,
+html body div#root main section div.carrousel img
+ {
+    width: 335px;
+    height: 255px;
+    
+}
+
+html body div#root main section div.carrousel img {
+    object-fit: cover;
+}
+
+html body div#root main div#dropdown {
+    width: 335px;
+
+}
+
+html body div#root main div#dropdown select {
+    width: 335px;
+
+}
