@@ -3,19 +3,23 @@
 @media only screen and (max-width: 767px) {
    body, header, main, section {
     flex-direction: column;
+    margin: 0 auto;
    }
 
    header img {
       height: 100px;
       width: 100px;
+      align-self: center;
    }
 
    
    main > section {
       max-width: 389px;
-      height: 4000px;
+      height: max-content;
       flex-wrap: wrap;
       flex-direction: column;
+      margin: 0 auto;
+      align-items: center;
    }
    html body div#root > main {
        width: 389px;
@@ -39,17 +43,22 @@
       display: flex;
       flex-direction: column;
       max-width: 389px;
+      padding: unset;
    }
    html body div#root > header {
       width: 389px;
+      padding: unset;
    }
    /* main section article img {
       width: 150px;
       height: 150px;
    } */
 
-   html body > footer {
-      width: 100px;
-      height: 100px;
+   html body div#root > footer {
+      width: 389px;
+      height: 210px;
+      padding: unset;
+      justify-content: center;
+      align-items: center;
    }
 }
