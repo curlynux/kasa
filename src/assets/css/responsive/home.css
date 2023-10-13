@@ -12,34 +12,41 @@
 
    
    main > section {
-      width: 350px;
-      height: 2000px;
+      max-width: 389px;
+      height: 4000px;
       flex-wrap: wrap;
       flex-direction: column;
    }
    html body div#root > main {
-       width: 350px;
-       height: 350px;
+       width: 389px;
    }
 
    html body div#root > main {
       overflow: unset;
       flex-direction: column;
-   }
-
-   article {
-       width: 380px;
-       height: 500px;
-   }
-   main section article {
-      width: 200px;
       flex-wrap: wrap;
    }
 
-   main section article img {
+   article {
+       width: 389px;
+       height: 500px;
+   }
+   main section article {
+      flex-wrap: wrap;
+   }
+
+   html body > div#root {
+      display: flex;
+      flex-direction: column;
+      max-width: 389px;
+   }
+   html body div#root > header {
+      width: 389px;
+   }
+   /* main section article img {
       width: 150px;
       height: 150px;
-   }
+   } */
 
    html body > footer {
       width: 100px;
