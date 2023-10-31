@@ -15,15 +15,15 @@ function Carrousel({ data }) {
 	const id = params.id;
 	function previousPhoto() {
 		setIsPlaying(true);
-		setCurrent((prevCurrent) =>
-			prevCurrent === 0 ? data.length - 1 : prevCurrent - 1
+		setCurrent((photoIndex) =>
+			photoIndex === 0 ? data.length - 1 : photoIndex - 1
 		);
 	}
 
 	function nextPhoto() {
 		setIsPlaying(true);
-		setCurrent((prevCurrent) =>
-			prevCurrent === data.length - 1 ? 0 : prevCurrent + 1
+		setCurrent((photoIndex) =>
+			photoIndex === data.length - 1 ? 0 : photoIndex + 1
 		);
 	}
 	return (
