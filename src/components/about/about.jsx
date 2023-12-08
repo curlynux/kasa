@@ -1,7 +1,7 @@
-import Dropdown from "../../components/dropdown/dropdown";
 import Header from "../header";
+import Collapse from "../collapse/collapse";
 function About() {
-	const items = [
+	const aboutData = [
 		{
 			id: "0",
 			title: "Fiabilité",
@@ -31,10 +31,12 @@ function About() {
 	return (
 		<>
 			<Header />
-			<div className="dropdown_container">
-				{items.map((item) => (
-					<Dropdown key={item.id} title={item.title} content={item.content} />
-				))}
+			<div id="collapseContainer">
+				{aboutData.map((about, index) => {
+					return (
+						<Collapse key={index} title={about.title} content={about.content} />
+					);
+				})}
 			</div>
 		</>
 	);

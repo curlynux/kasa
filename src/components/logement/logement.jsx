@@ -7,7 +7,6 @@ import Footer from "../footer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Carrousel from "../carrousel/carrousel";
-import Dropdown from "./dropdown";
 // import "../../assets/css/responsive/logement.css";
 
 function Logement() {
@@ -46,12 +45,7 @@ function Logement() {
 											})}
 										</div>
 									</aside>
-									<div id="dropdown">
-										<select name="description" id="description">
-											<option value="equipements">{element.description}</option>
-										</select>
-										<Dropdown data={data} id={id} />
-									</div>
+									<div id="dropdown"></div>
 								</>
 							);
 						}
