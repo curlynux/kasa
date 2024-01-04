@@ -4,10 +4,11 @@ import {
 	faChevronUp,
 	faChevronDown,
 } from "@fortawesome/fontawesome-free-solid";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 function Collapse({ title, content }) {
 	const [open, setIsOpen] = useState(false);
+
 	function collapseButton() {
 		if (open === false) setIsOpen(true);
 		else setIsOpen(false);
@@ -27,7 +28,13 @@ function Collapse({ title, content }) {
 					</button>
 				</div>
 
-				{open ? <div className="collapseContent">{content}</div> : <></>}
+				{open ? (
+					<div className={`collapseContent ${open ? "open" : ""}`}>
+						{content}
+					</div>
+				) : (
+					<></>
+				)}
 			</div>
 		</>
 	);

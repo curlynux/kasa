@@ -2,9 +2,52 @@ div.collapse, div.collapseHeading, div.collapseContent, div#collapseContainer {
     display: flex;
 } 
 
+div#collapseContainer {
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-around;
+    transition: height 2s;
+}
+
 div.collapseHeading {
     background-color: #FF6060;
+    border: 3px solid black;
+    justify-content: space-around;
+}
 
+@keyframes collapseAnimation 
+{
+    from 
+    {
+        height: 0px;
+        opacity: 0;
+    }
+
+    to 
+    {
+        height: 100px;
+        opacity: 1;
+    }
+}
+
+div.collapseContent {
+    background-color: aqua;
+    height: 0px;
+    opacity: 0;
+    animation: collapseAnimation 2s ease-in-out forwards;
+}
+
+div.collapseContainer ~ div.collapseContent
+{
+    animation: collapseAnimation 2s ease-in-out reverse forwards;
+}
+
+button.button svg, button.button svg path {
+    position: absolute;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    color: #FFFF;
 }
 
 h4 {
@@ -15,21 +58,20 @@ div.collapse {
     flex-direction: column;
     width: 1000px;
     margin: 0 auto;
+    overflow: hidden;
+    height: max-content;
+    transition: height 1s ease-in-out;
 }
 
-div.collapseContent {
-    background-color: aqua;
-    transition: max-height 0.5s ease-in-out;
-}
 
-div#collapseContainer {
-    transition: max-height 0.3 ease-in-out;
-    max-height: 500px;
-    flex-direction: column;
-    height: 400px;
-    justify-content: space-around;
-}
 
+
+/* quand une classe ou id en css est appeller 
+et qu'il y a une ou plusieurs regles css appliquer et fonctionnel,
+ et qu'on re-appelle cette meme claase ou id 
+ avec les meme regles mais avec des valeurs differentes
+  appliquer au declenchement d'un evenement
+   alors les premieres regles sont ignorer pour appliquer la 2e regle  */
 button {
     width: 10px;
     height: 10px;
@@ -40,15 +82,3 @@ button {
     border-radius: 10px;
 }
 
-button.button svg, button.button svg path {
-    position: absolute;
-    display: flex;
-    height: 40px;
-    width: 40px;
-    color: #FFFF
-}
-
-div.collapseHeading {
-    border: 3px solid black;
-    justify-content: space-around;
-}
