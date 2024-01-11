@@ -20,26 +20,18 @@ div.collapseHeading {
     from 
     {
         height: 0px;
-        opacity: 0;
     }
 
     to 
     {
-        height: 100px;
-        opacity: 1;
+        height: 70px;
     }
 }
 
 div.collapseContent {
     background-color: aqua;
     height: 0px;
-    opacity: 0;
-    animation: collapseAnimation 2s ease-in-out forwards;
-}
-
-div.collapseContainer ~ div.collapseContent
-{
-    animation: collapseAnimation 2s ease-in-out reverse forwards;
+    animation: collapseAnimation 1s ease-in-out forwards;
 }
 
 button.button svg, button.button svg path {

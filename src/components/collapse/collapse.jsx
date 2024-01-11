@@ -11,7 +11,9 @@ function Collapse({ title, content }) {
 
 	function collapseButton() {
 		if (open === false) setIsOpen(true);
-		else setIsOpen(false);
+		else {
+			return setIsOpen(false);
+		}
 	}
 
 	return (
@@ -29,10 +31,9 @@ function Collapse({ title, content }) {
 				</div>
 
 				{open ? (
-					<div className={`collapseContent ${open ? "open" : ""}`}>
-						{content}
-					</div>
+					<div className={`collapseContent open`}>{content}</div>
 				) : (
+					// <div className={`collapseContent close`}>{content}</div>
 					<></>
 				)}
 			</div>

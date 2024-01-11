@@ -28,9 +28,10 @@ function Main({ data }) {
 					firstSectionData.map((element, index) => {
 						return (
 							<article key={index}>
+								<span>{element.title}</span>
+
 								<Link to={`/logement/${element.id}`}>
 									<img src={element.cover} alt="location" />
-									<span>{element.title}</span>
 								</Link>
 							</article>
 						);
