@@ -1,5 +1,7 @@
 import Header from "../header";
 import Collapse from "../collapse/collapse";
+import Banner from "../banner/banner";
+
 function About() {
 	const aboutData = [
 		{
@@ -32,6 +34,7 @@ function About() {
 		<>
 			<Header />
 			<div id="collapseContainer">
+				<Banner />
 				{aboutData.map((about, index) => {
 					return (
 						<Collapse key={index} title={about.title} content={about.content} />

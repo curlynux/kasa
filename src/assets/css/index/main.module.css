@@ -3,10 +3,12 @@ main {
     width: 1240px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     margin: 0 auto;
     overflow: scroll;
-    /* box-shadow: -10px 1px 193px -5px rgba(0,0,0,0.49) inset; */
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 1095px;
 }
 
 main article {
@@ -14,27 +16,22 @@ main article {
     width: 340px;
     height: 340px;
     position: relative;
-    /* box-shadow: -10px 1px 193px -5px rgba(0,0,0,0.49) inset; */
     border-radius: 30px;
     overflow: hidden;
 }
 
 main section {
-    justify-content: space-between;
-    gap: 50px;
+    justify-content: space-evenly;
+    gap: 40px;
     width: 1240px;
     height: 450px;
     flex-wrap: wrap;
-    /* box-shadow: -10px 1px 193px -5px rgba(0,0,0,0.49) inset; */
 }
 
 main article img {
     height: 340px;
     width: 340px;
     border-radius: 30px;
-    /* box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); */
-    /* display: block; */
-    /* box-shadow: -10px 1px 193px -5px rgba(0,0,0,0.49) inset; */
 }
 
 article span {
@@ -46,12 +43,10 @@ article span {
     white-space: wrap;
     width: 200px;
     text-align: left;
-    /* box-shadow: -10px 1px 193px -5px rgba(0,0,0,0.49) inset; */
 }
 
 article a {
     height: 340px;
-    /* box-shadow: -10px 1px 193px -5px rgba(0,0,0,0.49) inset; */
 }
 
 main section article a::before {
@@ -64,7 +59,3 @@ main section article a::before {
     top: 0;
     width: 360px /*même largeur que la div precedente*/;
 }
-
-/* main section article::after {
-    box-shadow: -10px 1px 193px -5px rgba(0,0,0,0.49) inset;
-} */

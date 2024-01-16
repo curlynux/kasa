@@ -7,7 +7,7 @@ import Footer from "../footer";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Carrousel from "../carrousel/carrousel";
-// import "../../assets/css/responsive/logement.css";
+import Collapse from "../collapse/collapse";
 
 function Logement() {
 	const [data, setData] = useState();
@@ -39,13 +39,22 @@ function Logement() {
 									<aside>
 										<h2>{element.title}</h2>
 										<span id="location">{element.location}</span>
-										<div id="tag">
+										<div key={index} id="tag">
 											{element.tags.map((tag) => {
 												return <span>{tag}</span>;
 											})}
 										</div>
 									</aside>
-									<div id="dropdown"></div>
+									<div id="dropdown">
+										<Collapse
+											title="description"
+											content={element.description}
+										/>
+										<Collapse
+											title="equipements"
+											content={element.equipements}
+										/>
+									</div>
 								</>
 							);
 						}

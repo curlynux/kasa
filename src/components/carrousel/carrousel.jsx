@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
 import "../../assets/css/logement/arrow.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Carrousel({ data }) {
 	console.log("CARROUSEL", data);
@@ -33,11 +34,17 @@ function Carrousel({ data }) {
 					if (id === element.id) {
 						return (
 							<div className="carrousel" key={index}>
-								<img
+								<LazyLoadImage
 									src={element.pictures[current]}
 									alt={`cover:${element.id}`}
 									className={isPlaying ? "anime" : ""}
 								/>
+								{/* <img
+									src={element.pictures[current]}
+									alt={`cover:${element.id}`}
+									className={isPlaying ? "anime" : ""}
+									loading="lazy"
+								/> */}
 								<div
 									style={{
 										position: "absolute",

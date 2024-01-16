@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "../../assets/css/index/main.module.css";
 import "../../assets/css/responsive/home.css";
+import Banner from "../banner/banner";
+// import "../../../public/banner/banner.png";
 
 function Main({ data }) {
 	if (!Array.isArray(data)) {
@@ -22,22 +24,28 @@ function Main({ data }) {
 	);
 
 	return (
-		<main>
-			<section>
-				{firstSectionData &&
-					firstSectionData.map((element, index) => {
-						return (
-							<article key={index}>
-								<span>{element.title}</span>
+		<>
+			<Banner
+				image="../../../public/banner/banner2.png"
+				text="Chez vous, partout et ailleurs"
+			/>
+			<main>
+				<section>
+					{firstSectionData &&
+						firstSectionData.map((element, index) => {
+							return (
+								<article key={index}>
+									<span>{element.title}</span>
 
-								<Link to={`/logement/${element.id}`}>
-									<img src={element.cover} alt="location" />
-								</Link>
-							</article>
-						);
-					})}
-			</section>
-		</main>
+									<Link to={`/logement/${element.id}`}>
+										<img src={element.cover} alt="location" />
+									</Link>
+								</article>
+							);
+						})}
+				</section>
+			</main>
+		</>
 	);
 }
 

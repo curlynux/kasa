@@ -9,6 +9,16 @@ import { useState, useRef, useEffect } from "react";
 function Collapse({ title, content }) {
 	const [open, setIsOpen] = useState(false);
 
+	function renderContent(title) {
+		if (title === "equipements") {
+			return content.map((item, index) => {
+				return <span key={index}>{item}</span>;
+			});
+		} else {
+			return <div className={`collapseContent open`}>{content}</div>;
+		}
+	}
+
 	function collapseButton() {
 		if (open === false) setIsOpen(true);
 		else {
@@ -29,13 +39,7 @@ function Collapse({ title, content }) {
 						)}
 					</button>
 				</div>
-
-				{open ? (
-					<div className={`collapseContent open`}>{content}</div>
-				) : (
-					// <div className={`collapseContent close`}>{content}</div>
-					<></>
-				)}
+				{open ? renderContent(content) : <></>}
 			</div>
 		</>
 	);
