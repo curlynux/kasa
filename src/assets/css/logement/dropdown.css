@@ -4,7 +4,7 @@ div#dropdown, div.dropdown {
     width: 1240px;
     height: 52px;
     justify-content: space-between;
-    background-color: #FF6060
+    /* background-color: #FF6060 */
 }
 
 div#dropdown select {

@@ -31,9 +31,12 @@ div.collapseHeading {
 }
 
 div.collapseContent {
-    background-color: aqua;
+    background-color: #ddd6d6;
     height: 0px;
     animation: collapseAnimation 1s ease-in-out forwards;
+    border-radius: 20px;
+    margin-top: 10px;
+    justify-content: center;
 }
 
 button.button svg, button.button svg path {
@@ -50,7 +53,7 @@ h4 {
 
 div.collapse {
     flex-direction: column;
-    width: 1000px;
+    width: 600px;
     margin: 0 auto;
     overflow: hidden;
     height: max-content;

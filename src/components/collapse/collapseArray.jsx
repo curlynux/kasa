@@ -5,11 +5,14 @@ import {
 	faChevronDown,
 } from "@fortawesome/fontawesome-free-solid";
 import { useState, useRef, useEffect } from "react";
+import "../../assets/css/collapse/collapseArray.css";
 
-function Collapse({ title, content }) {
+function CollapseArray({ title, content }) {
 	const [open, setIsOpen] = useState(false);
 
 	function collapseButton() {
+		console.log(content);
+
 		if (open === false) setIsOpen(true);
 		else {
 			return setIsOpen(false);
@@ -29,10 +32,18 @@ function Collapse({ title, content }) {
 						)}
 					</button>
 				</div>
-				{open ? <div className={`collapseContent open`}>{content}</div> : <></>}
+				{open ? (
+					<div className={`collapseContent arrayEquipments open`}>
+						{content.map((equipement, index) => {
+							return <span key={index}>{equipement}</span>;
+						})}
+					</div>
+				) : (
+					<></>
+				)}
 			</div>
 		</>
 	);
 }
 
-export default Collapse;
+export default CollapseArray;

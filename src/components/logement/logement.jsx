@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Carrousel from "../carrousel/carrousel";
 import Collapse from "../collapse/collapse";
+import CollapseArray from "../collapse/collapse";
 
 function Logement() {
 	const [data, setData] = useState();
@@ -50,9 +51,9 @@ function Logement() {
 											title="description"
 											content={element.description}
 										/>
-										<Collapse
+										<CollapseArray
 											title="equipements"
-											content={element.equipements}
+											content={element.equipments}
 										/>
 									</div>
 								</>
